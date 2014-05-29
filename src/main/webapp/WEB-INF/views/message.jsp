@@ -18,7 +18,7 @@ ${result}
 ${error}
 <form method="get" action="/message/filter">
     <p>try message filter</p>
-    <input type="SUBMIT">
+    <input type="SUBMIT" value="toFilter">
 </form>
 </body>
 </html>

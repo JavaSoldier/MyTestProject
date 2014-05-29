@@ -21,7 +21,7 @@
 
     <p> toDate: </p> <input type="date" name="toDate">
 
-    <input type="submit">
+    <input type="submit" value="filter">
 </form>
 ${error}
 </body>

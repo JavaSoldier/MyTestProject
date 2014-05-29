@@ -49,10 +49,9 @@ public class MessageController {
             model.addAttribute("error", e.getMessage());
             log.error(e.getMessage(), e);
         }
-        if (log.isInfoEnabled()) {   // need to use if debug enabled, but we use logging to console...
+        if (log.isInfoEnabled()) {   // need to use if debug enabled, but i use logging to console...
             log.info(" sending message by user " + name + " ---> " + message);
         }
-        System.out.print("console is!");
         return "message";
     }
 

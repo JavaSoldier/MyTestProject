@@ -25,7 +25,7 @@ import java.util.List;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:test-context.xml"})
+@ContextConfiguration(locations = {"classpath*:test-context.xml"})
 public class MessageDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
 
     @Autowired
