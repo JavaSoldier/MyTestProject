@@ -124,6 +124,21 @@ public class MessageDaoTest extends AbstractTransactionalJUnit4SpringContextTest
         Assert.assertEquals(0, (messageDAO.filterMessagesByUserAndDates(null, getDate(lastDate), getDate(lastDate))).size());
     }
 
+    @Test
+    public void getUsersTest() {
+        Assert.assertEquals(5, messageDAO.getUsers().size());
+    }
+
+    @Test
+    public void sendMessage() {
+        messageDAO.sendMessage(1, "testMessage");
+    }
+
+    @Test(expected = DataAccessException.class)
+    public void sendMessageToUnexpUser() {
+        messageDAO.sendMessage(10, "testMessage");
+    }
+
     private Date getDate(String dateStr) throws ParseException {
         DateFormat lFormatter = new SimpleDateFormat("yyyy-MM-dd");
         return lFormatter.parse(dateStr);
