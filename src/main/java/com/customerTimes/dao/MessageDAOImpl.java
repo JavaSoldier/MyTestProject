@@ -23,7 +23,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 
-@Repository
+@Repository(value = "messageDAO")
 public class MessageDAOImpl implements MessageDAO {
 
     private JdbcTemplate jdbcTemplate;

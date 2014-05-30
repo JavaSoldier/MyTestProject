@@ -1,7 +1,6 @@
 package com.customerTimes.dao;
 
 import com.customerTimes.model.User;
-import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 
-@Repository
+
 public interface MessageDAO {
 
     User getUser(String name);
