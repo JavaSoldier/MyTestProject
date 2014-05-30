@@ -31,7 +31,6 @@ import java.util.List;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
-// ,locations = {"classpath:test-context.xml"})
 public class MessageDaoTest extends AbstractTransactionalJUnit4SpringContextTests {
 
     @Autowired
