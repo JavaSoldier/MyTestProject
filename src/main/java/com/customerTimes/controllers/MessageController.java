@@ -78,13 +78,13 @@ public class MessageController {
                          Model model) {
         try {
             model.addAttribute("messages", this.messageService.filter(name, from, to));
+            if (log.isInfoEnabled()) {
+                log.info("filter by name " + name + " dateFrom " + from + " dateTo " + to);
+            }
             return "showMessages";
         } catch (DataAccessException e) {
             model.addAttribute("error", e.getMessage());
             log.error(e.getMessage(), e);
-        }
-        if (log.isInfoEnabled()) {
-            log.info("filter by name " + name + " dateFrom " + from + " dateTo " + to);
         }
         return "message";
     }
